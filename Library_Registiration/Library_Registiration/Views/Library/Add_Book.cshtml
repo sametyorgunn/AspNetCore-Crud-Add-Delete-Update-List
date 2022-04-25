@@ -1,0 +1,35 @@
+﻿@model Book
+@{
+    ViewData["Title"] = "Add_Book";
+    Layout = "~/Views/Shared/_LibraryLayout.cshtml";
+}
+
+   <form method="post">
+                   
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Book name</label>
+                    <input type="text" name="Book_Name" class="form-control" id="exampleFormControlInput1" placeholder="">
+                     <span asp-validation-for="Book_name" class="text-danger"></span>  
+                  </div>
+
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Author name</label>
+                    <input type="text" name="Book_author" class="form-control" id="exampleFormControlInput1" placeholder="">
+                     <span asp-validation-for="Book_author" class="text-danger"></span>  
+                  </div>
+
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Publisher name</label>
+                    <input type="text" name="Book_publisher" class="form-control" id="exampleFormControlInput1" placeholder="">
+                     <span asp-validation-for="Book_publisher" class="text-danger"></span>  
+                  </div>
+                 
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Subject</label>
+                    <textarea class="form-control" name="Book_subject" id="exampleFormControlTextarea1" rows="4"></textarea>
+                     <span asp-validation-for="Book_subject" class="text-danger"></span>  
+                  </div>
+                  <br>
+                  <button type="submit" class="btn btn-primary">Save</button>
+               </form>
+

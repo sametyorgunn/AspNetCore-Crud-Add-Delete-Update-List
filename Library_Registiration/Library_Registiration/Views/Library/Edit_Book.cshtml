@@ -1,0 +1,64 @@
+﻿@model Book
+@{
+    ViewData["Title"] = "Edit_Book";
+    Layout = "~/Views/Shared/_LibraryLayout.cshtml";
+}
+
+@using (Html.BeginForm("Edit_Book","Library", FormMethod.Post))
+{
+    @Html.Label("Book id")
+    @Html.TextBoxFor(x=>x.Book_id, new{Class="form-control",@readonly="readonly"})
+    <br />
+
+    @Html.Label("Book name")
+    @Html.TextBoxFor(x=>x.Book_name, new{Class="form-control"})
+    <br />
+
+    @Html.Label("Book Author")
+    @Html.TextBoxFor(x=>x.Book_author, new{Class="form-control"})
+    <br />
+
+    @Html.Label("Book Publisher")
+    @Html.TextBoxFor(x=>x.Book_publisher, new{Class="form-control"})
+    <br />
+    @Html.Label("Subject")
+    @Html.TextAreaFor(x=>x.Book_subject,10,3, new{Class="form-control"})
+    <br />
+    <button type="submit" class="btn-primary ">Update</button>
+}
+
+
+
+
+
+
+
+
+
+
+
+@* <form>
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Kitap Adı</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Yazar Adı</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Deneme...</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                  </div>
+                 
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Kitap Konusu</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                  </div>
+                  <br>
+                  <button type="button" class="btn btn-primary">Güncelle</button>
+               </form>*@
+
+
